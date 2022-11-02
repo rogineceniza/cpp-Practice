@@ -31,25 +31,23 @@
 #include<algorithm>
 using namespace std;
 
-int main()
-{
-    // Get the array
-    int arr[] = { 1, 45, 54, 71, 76, 12 };
+int main() {
 
-    // Compute the sizes
-    int n = sizeof(arr) / sizeof(arr[0]);
+	int arr[] = { 34,56,76,76,54,23,312,43,56,786,973,4,3,545,6,8,9,0 };
+	int size = sizeof(arr) / sizeof(arr[0]);
 
-    // Print the array
-    cout << "Array: ";
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
+	sort(arr, arr + size, greater<int>()); // remove greater aron ma ascending order....
 
-    // Sort the array in descending order
-    sort(arr, arr + n, greater<int>());
+	cout << "Array in Descending order: \n";
+	for (int i = 0; i < size; i++) 
+	{
+		cout << arr[i] << " ";
+	}
 
-    // Print the sorted array
-    cout << "\nDescending Sorted Array:\n";
-    for (int i = 0; i < 3; i++)
-        cout << arr[i] << " ";
-    return 0;
+	cout << "\n\nTop 3 Largest Arrays:  ";
+	for (int i = 0; i < 3; i++) 
+	{
+		cout << "\n";
+		cout << arr[i] << " ";
+	}
 }
